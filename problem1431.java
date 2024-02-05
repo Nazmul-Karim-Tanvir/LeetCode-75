@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class problem1431 {
+public class Problem1431 {
 
     static class Solution {
         public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {

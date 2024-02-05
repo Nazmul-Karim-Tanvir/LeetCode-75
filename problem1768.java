@@ -1,4 +1,4 @@
-public class problem1768 {
+public class Problem1768 {
 
     static class Solution {
         public String mergeAlternately(String word1, String word2) {

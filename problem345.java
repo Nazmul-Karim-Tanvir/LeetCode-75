@@ -2,36 +2,41 @@ import java.util.ArrayList;
 //import java.util.Collections;
 import java.util.List;
 
-public class problem345 {
+public class Problem345 {
     public String reverseVowels(String s) {
 
-        List<Character> arr = new ArrayList<>();
+        //To store vowels
+        List<Character> vowels = new ArrayList<>();
+        
+        //To store new string 
         StringBuilder result = new StringBuilder(s);
+
+        //Identifying vowels in a string 
         for (int i = 0; i < s.length(); i++) {
             if ((s.charAt(i) == 'a') || (s.charAt(i) == 'e') || (s.charAt(i) == 'i') || (s.charAt(i) == 'o')
                     || (s.charAt(i) == 'u') || (s.charAt(i) == 'A') || (s.charAt(i) == 'E') || (s.charAt(i) == 'I') || (s.charAt(i) == 'O')
                     || (s.charAt(i) == 'U')) {
-                arr.add(s.charAt(i));
+                vowels.add(s.charAt(i));
                 result.setCharAt(i, '$');
             }
         }
-        int n = arr.size();
-        // Collections.reverse(arr);
+
+        // To reverse vowels position
+        int n = vowels.size();
+        // Collections.reverse(arr); or
         for (int i = 0; i < (n / 2); i++) {
-            char temp = arr.get(i);
-            arr.set(i, arr.get(n - 1 - i));
-            arr.set((n - 1 - i), temp);
-
+            char temp = vowels.get(i);
+            vowels.set(i, vowels.get(n - 1 - i));
+            vowels.set((n - 1 - i), temp);
         }
-        //System.out.println(arr);
 
+        //Updating reverse vowels to new Stirng 
         int count = 0;
-
         for (int i = 0; i < result.length(); i++) {
             if (result.charAt(i) == '$') {
 
-                for (int k = count; k < arr.size(); k++) {
-                    result.setCharAt(i, arr.get(k));
+                for (int k = count; k < vowels.size(); k++) {
+                    result.setCharAt(i, vowels.get(k));
                     count++;
                     break;
                 }
@@ -43,7 +48,7 @@ public class problem345 {
     }
 
     public static void main(String[] args) {
-        problem345 solve = new problem345();
+        Problem345 solve = new Problem345();
         String s = "a a";
         System.out.println(solve.reverseVowels(s));
     }

@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class shirtDistribution {
+public class ShirtDistribution {
 
     public static int[] distributeShirts(int totalShirts, int totalBags) {
         int[] shirtsInBags = new int[totalBags];

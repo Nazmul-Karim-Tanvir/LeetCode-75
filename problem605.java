@@ -1,4 +1,4 @@
-public class problem605 {
+public class Problem605 {
     public boolean canPlaceFlowers(int[] flowerbed, int n) {
         int count = 0;
         for (int i = 0; i < flowerbed.length; i++) {
@@ -13,7 +13,7 @@ public class problem605 {
     }
 
     public static void main(String[] args) {
-        problem605 solution = new problem605();
+        Problem605 solution = new Problem605();
         int[] flowerbd = { 1, 0, 0, 0, 1 };
 
         int n = 1;

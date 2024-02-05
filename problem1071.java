@@ -1,4 +1,4 @@
-public class problem1071 {
+public class Problem1071 {
 
     static class Solution {
         public String gcdOfStrings(String str1, String str2) {
