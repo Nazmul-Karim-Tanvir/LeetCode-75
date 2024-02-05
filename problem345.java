@@ -5,16 +5,17 @@ import java.util.List;
 public class Problem345 {
     public String reverseVowels(String s) {
 
-        //To store vowels
+        // To store vowels
         List<Character> vowels = new ArrayList<>();
-        
-        //To store new string 
+
+        // To store new string
         StringBuilder result = new StringBuilder(s);
 
-        //Identifying vowels in a string 
+        // Identifying vowels in a string
         for (int i = 0; i < s.length(); i++) {
             if ((s.charAt(i) == 'a') || (s.charAt(i) == 'e') || (s.charAt(i) == 'i') || (s.charAt(i) == 'o')
-                    || (s.charAt(i) == 'u') || (s.charAt(i) == 'A') || (s.charAt(i) == 'E') || (s.charAt(i) == 'I') || (s.charAt(i) == 'O')
+                    || (s.charAt(i) == 'u') || (s.charAt(i) == 'A') || (s.charAt(i) == 'E') || (s.charAt(i) == 'I')
+                    || (s.charAt(i) == 'O')
                     || (s.charAt(i) == 'U')) {
                 vowels.add(s.charAt(i));
                 result.setCharAt(i, '$');
@@ -22,25 +23,20 @@ public class Problem345 {
         }
 
         // To reverse vowels position
-        int n = vowels.size();
         // Collections.reverse(arr); or
+        int n = vowels.size();
         for (int i = 0; i < (n / 2); i++) {
             char temp = vowels.get(i);
             vowels.set(i, vowels.get(n - 1 - i));
             vowels.set((n - 1 - i), temp);
         }
 
-        //Updating reverse vowels to new Stirng 
+        // Updating reverse vowels to new Stirng
         int count = 0;
         for (int i = 0; i < result.length(); i++) {
             if (result.charAt(i) == '$') {
-
-                for (int k = count; k < vowels.size(); k++) {
-                    result.setCharAt(i, vowels.get(k));
+                    result.setCharAt(i, vowels.get(count));
                     count++;
-                    break;
-                }
-
             }
         }
 
