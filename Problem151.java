@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Problem151 {
     public String reverseWords(String s) {
         String result = "";
