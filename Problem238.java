@@ -36,9 +36,10 @@ public class Problem238 {
             leftProduct *= nums[i];
 
         }
-        // Calculate products off all elements to the right of i and multiply them with the products to the left of i
+        // Calculate products off all elements to the right of i and multiply them with
+        // the products to the left of i
         int rightProduct = 1;
-        for (int i = n-1; i >= 0; i--) {
+        for (int i = n - 1; i >= 0; i--) {
             result[i] *= rightProduct;
             rightProduct *= nums[i];
 
