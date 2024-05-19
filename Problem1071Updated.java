@@ -1,4 +1,4 @@
-public class Problem1071Ubdated {
+public class Problem1071Updated {
 
     public String gcdOfStrings(String str1, String str2) {
         if (!(str1 + str2).equals(str2 + str1)) {
@@ -44,7 +44,7 @@ public class Problem1071Ubdated {
      */
 
     public static void main(String[] args) {
-        Problem1071Ubdated solution = new Problem1071Ubdated();
+        Problem1071Updated solution = new Problem1071Updated();
         String s = solution.gcdOfStrings("ABAB", "ABABAB");
         System.out.println(s);
     }
