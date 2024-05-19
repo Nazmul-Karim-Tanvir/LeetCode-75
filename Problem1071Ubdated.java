@@ -16,10 +16,36 @@ public class Problem1071Ubdated {
         return gcd(b, a % b);
     }
 
-    
+    /*
+     * For 6 , 4
+     * a = 6, b = 4
+     * b==0 false
+     * So a = b = 4 , b = a % b = 6 % 4 = 2
+     * a = 4, b = 2
+     * b==0 false
+     * So a = b = 2 , b = a % b = 4 % 2 = 0
+     * a = 2 , b = 0
+     * b==0 true return a = 2
+     */
+
+     /*
+     * For 4 , 6
+     * a = 4, b = 6
+     * b==0 false
+     * So a = b = 6 , b = a % b = 4 % 6 = 4
+     * a = 6, b = 4
+     * b==0 false
+     * So a = b = 4 , b = a % b = 6 % 4 = 2
+     * a = 4, b = 2
+     * b==0 false
+     * So a = b = 2 , b = a % b = 4 % 2 = 0
+     * a = 2 , b = 0
+     * b==0 true return a = 2 ;
+     */
 
     public static void main(String[] args) {
         Problem1071Ubdated solution = new Problem1071Ubdated();
-        System.out.println(solution.gcdOfStrings("LEED", "CODE"));
+        String s = solution.gcdOfStrings("ABAB", "ABABAB");
+        System.out.println(s);
     }
 }
