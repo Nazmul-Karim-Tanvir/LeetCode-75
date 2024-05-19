@@ -9,15 +9,14 @@ public class Problem1431Updated {
             int maxCandies = 0;
             
             // Find the maximum number of candies any kid currently has
-            for (int candy : candies) {
-                maxCandies = Math.max(maxCandies, candy);
+            for (int i : candies) {
+                maxCandies = Math.max(maxCandies, i);
             }
             
             // Determine if each kid can have the greatest number of candies with extraCandies
-            for (int candy : candies) {
-                result.add(candy + extraCandies >= maxCandies);
+            for (int i : candies) {
+                result.add(i + extraCandies >= maxCandies);
             }
-            
             return result;
         }
     }
