@@ -10,7 +10,7 @@ public class Problem11 {
         // Use a while loop to move the pointers towards each other
         while (left < right) {
             // Calculate the width between the current left and right pointers
-            int width = right - left;
+            int width = right - left; 
 
             // Calculate the height by taking the minimum of the two lines
             int minHeight = Math.min(height[left], height[right]);
